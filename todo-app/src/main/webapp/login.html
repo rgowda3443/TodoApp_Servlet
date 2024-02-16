@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+<style>
+
+body{
+display:flex;
+align-items:center;
+justify-content: center;
+flex-direction:column; 
+height: 100vh;
+background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20220908/pngtree-majestic-sun-rising-above-the-mahanadi-river-odisha-amidst-the-eastern-ghat-mountain-range-photo-image_28168538.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.login{
+height:300px;
+width:400px;
+display: flex;
+align-items:center;
+justify-content: center; 
+border: 2px solid black;
+box-shadow: 2px 2px 10px grey;
+backdrop-filter: blur(15px);
+}
+
+a{
+color: white;
+}
+a:active {
+	color: white;
+}
+</style>
+</head>
+<body>
+<div class="login">
+	<form action="login" method="post">
+	<h1>Login Form</h1>
+		<label>Email/phone: </label> <input type="text" name="emph"><br><br>
+		<label>Password </label> <input type="password" name="password"><br><br>
+		<button type="submit">Login</button> <button type="reset">Cancel</button> <br><br>
+		<a href="signup.html">Don`t have an account? Register here</a><br><br>
+	</form>
+	</div>
+</body>
+</html>

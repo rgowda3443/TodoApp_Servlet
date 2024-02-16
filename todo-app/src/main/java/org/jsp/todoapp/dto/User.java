@@ -1,0 +1,75 @@
+package org.jsp.todoapp.dto;
+
+import java.time.LocalDate;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import org.jsp.todoapp.helpers.AES;
+
+@Entity
+public class User {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	int id;
+	@Column(nullable=false,unique=false)
+	private String name;
+	@Column(nullable=false,unique=false)
+	private String email;
+	@Column(nullable=false,unique=false)
+	private String password;
+	@Column(nullable=false,unique=false)
+	private String gender;
+	@Column(nullable=false,unique=true)
+	private long mobile;
+	@Column(nullable=false,unique=false)
+	private LocalDate dob;
+	
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getPassword() {
+		return AES.decrypt(password, "123");
+	}
+	public void setPassword(String password) {
+		this.password = AES.encrypt(password, "123");
+	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	public long getMobile() {
+		return mobile;
+	}
+	public void setMobile(long mobile) {
+		this.mobile = mobile;
+	}
+	public LocalDate getDob() {
+		return dob;
+	}
+	public void setDob(LocalDate dob) {
+		this.dob = dob;
+	}
+	
+	
+}

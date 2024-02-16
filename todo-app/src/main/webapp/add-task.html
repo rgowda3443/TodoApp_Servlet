@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Task</title>
+<style>
+div {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+body {
+	height: 100vh;
+	background-image:
+		url("https://wallpapers.com/images/featured/deadpool-tzhfez1w8ud2z8aw.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+form {
+	backdrop-filter: blur(15px);
+}
+</style>
+</head>
+<body>
+	<div>
+		<h1>Add Task</h1>
+		<form action="add-task" method="post" enctype="multipart/form-data">
+			<fieldset>
+				<legend>Enter Task here,</legend>
+				<table>
+					<tr>
+						<th>Task Name:</th>
+						<th><input type="text" name="tname"></th>
+					</tr>
+					<tr>
+						<th>Task Description:</th>
+						<th><input type="text" name="tdesc"></th>
+					</tr>
+					<tr>
+						<th>Task Image:</th>
+						<th><input type="file" name="timg"></th>
+					</tr>
+					<tr>
+						<th><button type="submit">Add</button></th>
+						<th><button type="reset">Cancel</button></th>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+		
+	</div>
+</body>
+</html>

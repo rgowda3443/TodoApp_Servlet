@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>SignUp</title>
+<style>
+
+button{
+height:25px;
+width:100px;
+background-color: green;
+color:white;
+gap:10px;
+}
+
+body{
+display: flex;
+align-items:center;
+justify-content: center; 
+flex-direction:column;
+height:100vh;
+background-image: url("https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.btn{
+height:10px;
+width:250px;
+display: flex;
+align-items:center;
+justify-content: space-between;
+}
+
+.signUp{
+height:400px;
+width:400px;
+display: flex;
+align-items:center;
+justify-content: center; 
+border: 2px solid black;
+box-shadow: 2px 2px 10px grey;
+backdrop-filter: blur(15px);
+}
+a{
+color: white;
+}
+a:active {
+	color: white;
+}
+</style>
+</head>
+<body>
+	<div class="signUp">
+		<form action="signup" method="post">
+			<h1>SignUp Form</h1>
+			Name: <input type="text" name="name" required><br>
+			<br> Email: <input type="text" name="email" required><br>
+			<br> Mobile: <input type="number" name="mobile" required><br>
+			<br>Password: <input type="password" name="password" required><br>
+			<br> DOB: <input type="date" name="dob" required> <br>
+			<br>Gender: <input type="radio" name="gender" value="male">Male
+			<input type="radio" name="gender" value="female">Female <br>
+			<br>
+			<div class="btn">
+			<button type="submit">SUBMIT</button>
+			<button type="reset">Cancel</button>
+			</div>
+			<br> <br> <a href="login.html">Already registered?
+				login here</a>
+		</form>
+	</div>
+</body>
+</html>
